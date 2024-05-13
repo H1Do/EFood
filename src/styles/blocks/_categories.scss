@@ -1,0 +1,46 @@
+.categories {
+  &__menu {
+    &:not(:last-child) {
+      margin-bottom: 39px;
+    }
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 26px;
+
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+
+      @include desktop {
+        overflow-x: scroll;
+      }
+    }
+
+    &-item {
+      scroll-snap-align: center;
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 8px;
+
+      height: 80px;
+      width: 210px;
+      border-radius: 8px;
+      box-shadow: none;
+      font-size: 24px;
+
+      color: var(--primary-color);
+      background-color: var(--white-color);
+
+      &.is-selected {
+        box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+        color: var(--white-color);
+        background-color: var(--secondary-color);
+      }
+    }
+  }
+}

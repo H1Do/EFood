@@ -1,0 +1,15 @@
+.section {
+  &__title {
+    padding-top: var(--between-section-distance);
+    text-align: center;
+    text-transform: capitalize;
+
+    &:not(:last-child) {
+      margin-bottom: clamp(30px, calc(53 / 1440 * 100vw), 53px);
+    }
+  }
+
+  &--hidden-x {
+    overflow-x: hidden;
+  }
+}

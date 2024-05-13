@@ -1,0 +1,143 @@
+.footer {
+  padding-top: var(--between-section-distance);
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: space-between;
+    padding-bottom: 25px;
+
+    @include tablet {
+      grid-template-columns: repeat(4, auto);
+      justify-content: space-evenly;
+      row-gap: 30px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+
+  &__main {
+    @include tablet {
+      grid-column: span 4;
+      justify-self: center;
+    }
+
+    @include mobile {
+      grid-column: span 2;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+
+      margin-block: 8px 15px;
+    }
+
+    &-link {
+      @include reset-link;
+
+      display: flex;
+      align-items: center;
+      column-gap: 7px;
+      transition-duration: var(--transition-duration);
+
+      @include hover {
+        color: var(--secondary-color);
+      }
+    }
+  }
+
+  &__links {
+    font-size: 18px;
+    letter-spacing: 1%;
+    line-height: 2.72;
+
+    &-title {
+      font-weight: 500;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+    }
+
+    &-link {
+      @include reset-link;
+
+      transition-duration: var(--transition-duration);
+
+      @include hover {
+        color: var(--secondary-color);
+      }
+    }
+  }
+
+  &__soc1als {
+    &-list {
+      display: flex;
+      column-gap: 13px;
+    }
+
+    &-item {
+      background-color: #EEEEEF;
+      border-radius: 50%;
+    }
+
+    &-link {
+      @include square(39px);
+      @include flex-center;
+
+      color: var(--primary-color);
+      transition-duration: var(--transition-duration);
+
+      @include hover {
+        color: var(--secondary-color);
+      }
+    }
+  }
+
+  &__extra {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-block: 26px 36px;
+    color: var(--gray-color);
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 20px;
+    }
+
+    &::before {
+      content: '';
+      left: 50%;
+      top: 0;
+      translate: -50%;
+      position: absolute;
+      width: 1472px;
+      height: 1px;
+      background-color: rgba(150, 150, 150, 0.2);
+      z-index: -1;
+    }
+
+    &-list {
+      display: flex;
+      column-gap: 51px;
+    }
+
+    &-link {
+      @include reset-link;
+
+      transition-duration: var(--transition-duration);
+
+      @include hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+}

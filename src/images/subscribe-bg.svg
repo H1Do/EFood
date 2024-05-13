@@ -1,0 +1,87 @@
+<svg width="1170.000000" height="312.000000" viewBox="0 0 1170 312" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient x1="714.028687" y1="392.266052" x2="380.134583" y2="16.457245" id="paint_linear_0_553_0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.775314" stop-color="#FFFFFF"/>
+      <stop offset="1.000000" stop-color="#FFFFFF" stop-opacity="0.000000"/>
+    </linearGradient>
+    <linearGradient x1="-171.815460" y1="47.447388" x2="173.651886" y2="436.282043" id="paint_linear_0_554_0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.775314" stop-color="#FFFFFF"/>
+      <stop offset="1.000000" stop-color="#FFFFFF" stop-opacity="0.000000"/>
+    </linearGradient>
+    <linearGradient x1="-99.249146" y1="-124.483551" x2="165.395386" y2="399.022430" id="paint_linear_0_555_0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.833345" stop-color="#FFFFFF"/>
+      <stop offset="1.000000" stop-color="#FFFFFF" stop-opacity="0.000000"/>
+    </linearGradient>
+    <linearGradient x1="455.971283" y1="392.266052" x2="789.865479" y2="16.457245" id="paint_linear_0_558_0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.775314" stop-color="#FFFFFF"/>
+      <stop offset="1.000000" stop-color="#FFFFFF" stop-opacity="0.000000"/>
+    </linearGradient>
+    <linearGradient x1="1341.815430" y1="47.447388" x2="996.348145" y2="436.282043" id="paint_linear_0_559_0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.775314" stop-color="#FFFFFF"/>
+      <stop offset="1.000000" stop-color="#FFFFFF" stop-opacity="0.000000"/>
+    </linearGradient>
+    <linearGradient x1="1269.249390" y1="-124.483551" x2="1004.604858" y2="399.022430" id="paint_linear_0_560_0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.833345" stop-color="#FFFFFF"/>
+      <stop offset="1.000000" stop-color="#FFFFFF" stop-opacity="0.000000"/>
+    </linearGradient>
+  </defs>
+  <mask id="mask0_550" mask-type="alpha" maskUnits="userSpaceOnUse" x="0.000000" y="0.000000" width="1170.000000" height="312.000000">
+    <g opacity="0.300000">
+      <rect id="Rectangle 641" width="1170.000000" height="312.000000" fill="#1C9DFB" fill-opacity="1.000000"/>
+    </g>
+  </mask>
+  <g mask="url(#mask0_550)">
+    <mask id="mask0_552" mask-type="alpha" maskUnits="userSpaceOnUse" x="0.000000" y="0.000244" width="585.000000" height="333.449951">
+      <rect id="Rectangle 564" width="585.000000" height="333.450012" transform="matrix(1 0 0 -1 0 333.45)" fill="#FFFFFF" fill-opacity="1.000000"/>
+    </mask>
+    <g mask="url(#mask0_552)">
+      <g opacity="0.100000">
+        <path id="Vector 153" d="M584.97 222.42L419.53 20.81L344.21 20.81L584.97 312.71L584.97 222.42Z" fill="url(#paint_linear_0_553_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+      </g>
+    </g>
+    <g mask="url(#mask0_552)">
+      <g opacity="0.050000">
+        <path id="Vector 154" d="M-38.29 223.17L132.88 431.77L210.82 431.77L-38.29 129.75L-38.29 223.17Z" fill="url(#paint_linear_0_554_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+      </g>
+    </g>
+    <g mask="url(#mask0_552)">
+      <g opacity="0.120000">
+        <path id="Vector 155" d="M60.85 -17.25L0.19 -17.25L0.19 175.93L171.37 384.53L414.27 384.53L60.85 -17.25Z" fill="url(#paint_linear_0_555_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+  <g mask="url(#mask0_550)">
+    <mask id="mask0_557" mask-type="alpha" maskUnits="userSpaceOnUse" x="585.000000" y="0.000244" width="585.000000" height="333.449951">
+      <rect id="Rectangle 564" x="1170.000000" y="333.450195" width="585.000000" height="333.450012" transform="rotate(180 1170.000000 333.450195)" fill="#FFFFFF" fill-opacity="1.000000"/>
+    </mask>
+    <g mask="url(#mask0_557)">
+      <g opacity="0.100000">
+        <path id="Vector 153" d="M585.02 222.42L750.46 20.81L825.78 20.81L585.02 312.71L585.02 222.42Z" fill="url(#paint_linear_0_558_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+      </g>
+    </g>
+    <g mask="url(#mask0_557)">
+      <g opacity="0.050000">
+        <path id="Vector 154" d="M1208.29 223.17L1037.11 431.77L959.17 431.77L1208.29 129.75L1208.29 223.17Z" fill="url(#paint_linear_0_559_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+      </g>
+    </g>
+    <g mask="url(#mask0_557)">
+      <g opacity="0.120000">
+        <path id="Vector 155" d="M1109.15 -17.25L1169.8 -17.25L1169.8 175.93L998.62 384.53L755.72 384.53L1109.15 -17.25Z" fill="url(#paint_linear_0_560_0)" fill-opacity="1.000000" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+  <g mask="url(#mask0_550)">
+    <rect id="Rectangle 221" x="853.068848" y="218.442383" rx="4.000000" width="14.000893" height="13.551006" transform="rotate(35.4524 853.068848 218.442383)" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="3.000000"/>
+    <rect id="Rectangle 224" x="1003.994873" y="160.391602" rx="4.000000" width="14.000893" height="13.551006" transform="rotate(35.4524 1003.994873 160.391602)" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="3.000000"/>
+    <rect id="Rectangle 223" x="559.716675" y="299.689941" rx="4.000000" width="14.000893" height="13.551006" transform="rotate(35.4524 559.716675 299.689941)" stroke="#FDB735" stroke-opacity="1.000000" stroke-width="3.000000"/>
+    <rect id="Rectangle 222" x="650.413391" y="107.588623" rx="3.000000" width="9.885131" height="9.570621" transform="rotate(35.4524 650.413391 107.588623)" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="2.000000"/>
+    <path id="Ellipse 20" d="M903.02 308.54Q902.12 308.92 901.38 309.52Q900.65 310.11 900.15 310.86Q899.65 311.61 899.42 312.45Q899.19 313.28 899.25 314.13Q899.3 314.97 899.63 315.76Q899.96 316.55 900.53 317.22Q901.11 317.9 901.89 318.4Q902.67 318.91 903.59 319.2Q904.52 319.49 905.51 319.53Q906.5 319.57 907.47 319.36Q908.44 319.14 909.3 318.69Q910.15 318.23 910.82 317.58Q911.48 316.93 911.89 316.14Q912.3 315.36 912.44 314.51L915.52 315.1Q915.32 316.37 914.71 317.53Q914.11 318.68 913.15 319.62Q912.2 320.55 910.98 321.2Q909.77 321.85 908.38 322.16Q907 322.47 905.57 322.41Q904.13 322.35 902.76 321.92Q901.39 321.49 900.21 320.72Q899.02 319.95 898.13 318.91Q897.24 317.87 896.73 316.64Q896.22 315.41 896.14 314.12Q896.05 312.82 896.39 311.57Q896.73 310.33 897.47 309.24Q898.19 308.15 899.25 307.3Q900.3 306.45 901.58 305.91L903.02 308.54ZM901.58 305.94L901.58 305.91C902.36 305.59 903.28 305.91 903.69 306.65C904.09 307.39 903.8 308.22 903.02 308.54L902.99 308.54L901.58 305.94ZM912.46 314.53L912.44 314.51C912.56 313.72 913.34 313.23 914.2 313.4C915.07 313.56 915.65 314.31 915.52 315.1L915.5 315.12L912.46 314.53Z" fill="#FDB735" fill-opacity="1.000000" fill-rule="evenodd"/>
+    <path id="Ellipse 53" d="M628.38 364.32Q627.54 364.78 626.89 365.44Q626.24 366.1 625.84 366.89Q625.44 367.68 625.32 368.54Q625.2 369.39 625.37 370.23Q625.53 371.07 625.96 371.83Q626.4 372.59 627.06 373.21Q627.73 373.83 628.57 374.26Q629.42 374.68 630.37 374.88Q631.33 375.08 632.31 375.02Q633.3 374.96 634.23 374.66Q635.16 374.35 635.94 373.81Q636.73 373.28 637.3 372.57Q637.87 371.86 638.18 371.04Q638.49 370.22 638.51 369.36L641.67 369.58Q641.63 370.86 641.17 372.07Q640.72 373.28 639.89 374.31Q639.06 375.34 637.93 376.11Q636.79 376.88 635.45 377.32Q634.11 377.77 632.67 377.85Q631.23 377.93 629.82 377.64Q628.4 377.35 627.13 376.71Q625.86 376.06 624.84 375.12Q623.83 374.18 623.17 373.02Q622.51 371.86 622.26 370.58Q622.01 369.31 622.19 368.04Q622.37 366.77 622.96 365.61Q623.54 364.45 624.48 363.5Q625.42 362.55 626.64 361.88L628.38 364.32ZM626.63 361.91L626.64 361.88C627.37 361.48 628.33 361.7 628.82 362.38C629.31 363.06 629.12 363.92 628.38 364.32L628.35 364.32L626.63 361.91ZM638.53 369.38L638.51 369.36C638.53 368.57 639.25 368 640.13 368.06C641.01 368.12 641.69 368.79 641.67 369.58L641.64 369.6L638.53 369.38Z" fill="#FDB735" fill-opacity="1.000000" fill-rule="evenodd"/>
+  </g>
+</svg>
