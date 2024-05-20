@@ -1,0 +1,16 @@
+.restaurants {
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: clamp(20px, calc(43 / 1440 * 100vw), 43px);
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+}
