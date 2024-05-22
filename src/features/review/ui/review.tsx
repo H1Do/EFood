@@ -1,7 +1,8 @@
 import { FC } from 'react';
-
-import reviewBg from 'shared/assets/images/review-bg.png';
 import { Button } from 'shared/ui/button';
+import ReviewArrowIcon from 'shared/assets/images/icons/review-arrow.svg?react';
+import reviewBg from 'shared/assets/images/review-bg.png';
+import './review.scss';
 
 interface ReviewProps {
   className?: string;
@@ -37,67 +38,14 @@ export const Review: FC<ReviewProps> = ({ className }) => {
             isSvg={true}
             className="review__button review__button--disabled"
           >
-            <svg
-              width="24.000000"
-              height="20.008057"
-              viewBox="0 0 24 20.0081"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <defs />
-              <path
-                id="Vector"
-                d="M23 10L1 10"
-                stroke="#7B7B7B"
-                strokeOpacity="1.000000"
-                strokeWidth="2.000000"
-                strokeLinejoin="round"
-                strokeLinecap="round"
-              />
-              <path
-                id="Vector"
-                d="M10 1L1 10L10 19"
-                stroke="#7B7B7B"
-                strokeOpacity="1.000000"
-                strokeWidth="2.000000"
-                strokeLinejoin="round"
-                strokeLinecap="round"
-              />
-            </svg>
+            <ReviewArrowIcon />
             <span className="visually-hidden">See previous preview</span>
           </Button>
           <Button
             isSvg={true}
             className="review__button review__button--active"
           >
-            <svg
-              width="24.000000"
-              height="20.008057"
-              viewBox="0 0 24 20.0081"
-              fill="none"
-              style={{ scale: '-1' }}
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <defs />
-              <path
-                id="Vector"
-                d="M23 10L1 10"
-                stroke="#7B7B7B"
-                strokeOpacity="1.000000"
-                strokeWidth="2.000000"
-                strokeLinejoin="round"
-                strokeLinecap="round"
-              />
-              <path
-                id="Vector"
-                d="M10 1L1 10L10 19"
-                stroke="#7B7B7B"
-                strokeOpacity="1.000000"
-                strokeWidth="2.000000"
-                strokeLinejoin="round"
-                strokeLinecap="round"
-              />
-            </svg>
+            <ReviewArrowIcon style={{ scale: '-1' }} />
             <span className="visually-hidden">See next preview</span>
           </Button>
         </div>

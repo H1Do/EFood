@@ -1,26 +1,35 @@
-import { FC } from 'react';
-import { Button } from '../button';
+import { FC, useEffect, useRef } from 'react';
+import { CrossButton } from './../crossButton';
+import './mobile-overlay.scss';
 
 interface MobileOverlayProps {
+  setDialog: (dialog: HTMLDialogElement) => void;
   children: React.ReactNode;
 }
 
-const MobileOverlay: FC<MobileOverlayProps> = ({ children }) => {
+export const MobileOverlay: FC<MobileOverlayProps> = ({
+  setDialog,
+  children,
+}) => {
+  const dialogRef = useRef<HTMLDialogElement>(null);
+
+  useEffect(() => {
+    if (dialogRef.current) {
+      setDialog(dialogRef.current);
+    }
+  }, [dialogRef.current]);
+
   return (
-    <dialog className="mobile-overlay visible-mobile" id="mobileOverlay">
+    <dialog className="mobile-overlay visible-mobile" ref={dialogRef}>
       <form method="dialog" className="mobile-overlay__close-button-wrapper">
-        <Button
-          className="mobile-overlay__close-button cross-button"
-          isSvg={true}
+        <CrossButton
+          className="mobile-overlay__close-button"
           buttonType="submit"
         >
           <span className="visually-hidden">Close navigation menu</span>
-        </Button>
+        </CrossButton>
       </form>
-
       {children}
     </dialog>
   );
 };
-
-export default MobileOverlay;

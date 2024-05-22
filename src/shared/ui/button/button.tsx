@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import './button.scss';
 
 interface ButtonProps {
   isLink?: boolean;

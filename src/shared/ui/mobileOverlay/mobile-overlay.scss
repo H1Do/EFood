@@ -1,9 +1,12 @@
+@import "shared/styles/mixins";
+@import "shared/styles/media";
+
 .mobile-overlay {
   width: 100%;
   height: 100%;
   margin: 0;
   border: none;
-  padding: 36px 30px;
+  padding: 30px;
 
   &:modal {
     max-width: 100%;

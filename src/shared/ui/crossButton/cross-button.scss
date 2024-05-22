@@ -1,4 +1,7 @@
-.burger-button {
+@import "shared/styles/mixins";
+@import "shared/styles/media";
+
+.cross-button {
   @include reset-button;
   @include square(48px);
 
@@ -10,15 +13,22 @@
     background-color: var(--secondary-color);
   }
 
-  &::after {
+  &::after,
+  &::before {
     @include abs-center;
-
     content: '';
+
     width: 70%;
     height: 3px;
     border-radius: 5px;
     background-color: var(--primary-color);
+  }
 
-    box-shadow: 0 10px var(--primary-color), 0 -10px var(--primary-color);
+  &::after {
+    rotate: 45deg;
+  }
+
+  &::before {
+    rotate: -45deg;
   }
 }

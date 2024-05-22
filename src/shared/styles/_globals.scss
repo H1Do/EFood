@@ -32,6 +32,10 @@ h2 {
   @include fluid-text(36, 30);
 }
 
+svg {
+  color: currentColor;
+}
+
 .content {
   overflow-x: hidden;
 }
