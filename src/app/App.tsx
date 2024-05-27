@@ -1,11 +1,12 @@
 import { Home } from 'pages/home';
-import './styles.scss';
+import './styles/styles.scss';
+import { Providers } from './providers';
 
 function App() {
   return (
-    <>
+    <Providers>
       <Home />
-    </>
+    </Providers>
   );
 }
 

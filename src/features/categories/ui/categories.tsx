@@ -1,102 +1,39 @@
 import { Slider } from 'shared/ui/slider';
-import { FC, useMemo, useState } from 'react';
+import { FC, useEffect, useMemo, useState } from 'react';
 import { Product } from 'shared/types/product';
 import { Button } from 'shared/ui/button';
 import { ProductCard } from 'entities/productCard';
-import productImage1 from 'shared/assets/images/products/1.png';
-import productImage2 from 'shared/assets/images/products/2.png';
-import productImage3 from 'shared/assets/images/products/3.png';
-import productImage4 from 'shared/assets/images/products/4.png';
-import productImage5 from 'shared/assets/images/products/5.png';
+import { ProductCategories } from 'shared/types/productCategories';
+
 import BurgerIcon from 'shared/assets/images/icons/burder-icon.svg?react';
 import PizzaIcon from 'shared/assets/images/icons/pizza-icon.svg?react';
 import SandwichIcon from 'shared/assets/images/icons/sandwich-icon.svg?react';
 import AsianFoodIcon from 'shared/assets/images/icons/asian-food-icon.svg?react';
 import SetMenuIcon from 'shared/assets/images/icons/set-menu-icon.svg?react';
 import './categories.scss';
+import { getProducts } from 'shared/api/product/product';
 
 interface CategoriesProps {
   className?: string;
 }
 
-enum categoryNames {
-  Burger = 'burger',
-  Pizza = 'pizza',
-  Sandwich = 'sandwich',
-  AsianFood = 'asian-food',
-  SetMenu = 'set-menu',
-}
-
 export const Categories: FC<CategoriesProps> = ({ className }) => {
-  const slidesInfo = useMemo<Product[]>(
-    () => [
-      {
-        id: 1,
-        title: 'Cheesburger With Salad',
-        price: 18,
-        rating: 10,
-        image: productImage1,
-      },
-      {
-        id: 2,
-        title: 'Beef Burger',
-        price: 15,
-        rating: 9,
-        image: productImage2,
-      },
-      {
-        id: 3,
-        title: 'Royel Cheeseburger',
-        price: 16,
-        rating: 10,
-        image: productImage3,
-      },
-      {
-        id: 4,
-        title: 'Black Gambugrer',
-        price: 14,
-        rating: 10,
-        image: productImage4,
-      },
-      {
-        id: 5,
-        title: 'Chicken Burger',
-        price: 15,
-        rating: 10,
-        image: productImage5,
-      },
-      {
-        id: 6,
-        title: 'Cheesburger With Salad',
-        price: 18,
-        rating: 10,
-        image: productImage1,
-      },
-      {
-        id: 7,
-        title: 'Beef Burger',
-        price: 15,
-        rating: 9,
-        image: productImage2,
-      },
-      {
-        id: 8,
-        title: 'Royel Cheeseburger',
-        price: 16,
-        rating: 10,
-        image: productImage3,
-      },
-    ],
-    [],
+  const [selectedCategory, setSelectedCategory] = useState<ProductCategories>(
+    ProductCategories.Burger,
   );
+
+  const [slidesProducts, setSlidesProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    getProducts(selectedCategory)
+      .then((data) => setSlidesProducts(data))
+      .catch((err) => console.log(err));
+  }, [selectedCategory]);
 
   const slidesElements = useMemo<JSX.Element[]>(
-    () => slidesInfo.map((slideInfo) => <ProductCard item={slideInfo} />),
-    [slidesInfo],
-  );
-
-  const [selectedCategory, setSelectedCategory] = useState<categoryNames>(
-    categoryNames.Burger,
+    () =>
+      slidesProducts.map((slideProduct) => <ProductCard item={slideProduct} />),
+    [slidesProducts],
   );
 
   return (
@@ -105,8 +42,8 @@ export const Categories: FC<CategoriesProps> = ({ className }) => {
         <ul className="categories__menu-list">
           <li className="categories__menu-item">
             <Button
-              className={`categories__menu-button ${selectedCategory === categoryNames.Burger ? 'is-selected' : ''}`}
-              onClick={() => setSelectedCategory(categoryNames.Burger)}
+              className={`categories__menu-button ${selectedCategory === ProductCategories.Burger ? 'is-selected' : ''}`}
+              onClick={() => setSelectedCategory(ProductCategories.Burger)}
             >
               <BurgerIcon />
               Burger
@@ -114,8 +51,8 @@ export const Categories: FC<CategoriesProps> = ({ className }) => {
           </li>
           <li className="categories__menu-item">
             <Button
-              className={`categories__menu-button ${selectedCategory === categoryNames.Pizza ? 'is-selected' : ''}`}
-              onClick={() => setSelectedCategory(categoryNames.Pizza)}
+              className={`categories__menu-button ${selectedCategory === ProductCategories.Pizza ? 'is-selected' : ''}`}
+              onClick={() => setSelectedCategory(ProductCategories.Pizza)}
             >
               <PizzaIcon />
               tPizza
@@ -123,8 +60,8 @@ export const Categories: FC<CategoriesProps> = ({ className }) => {
           </li>
           <li className="categories__menu-item">
             <Button
-              className={`categories__menu-button ${selectedCategory === categoryNames.Sandwich ? 'is-selected' : ''}`}
-              onClick={() => setSelectedCategory(categoryNames.Sandwich)}
+              className={`categories__menu-button ${selectedCategory === ProductCategories.Sandwich ? 'is-selected' : ''}`}
+              onClick={() => setSelectedCategory(ProductCategories.Sandwich)}
             >
               <SandwichIcon />
               sandwich
@@ -132,8 +69,8 @@ export const Categories: FC<CategoriesProps> = ({ className }) => {
           </li>
           <li className="categories__menu-item">
             <Button
-              className={`categories__menu-button ${selectedCategory === categoryNames.AsianFood ? 'is-selected' : ''}`}
-              onClick={() => setSelectedCategory(categoryNames.AsianFood)}
+              className={`categories__menu-button ${selectedCategory === ProductCategories.AsianFood ? 'is-selected' : ''}`}
+              onClick={() => setSelectedCategory(ProductCategories.AsianFood)}
             >
               <AsianFoodIcon />
               Asian Food
@@ -141,8 +78,8 @@ export const Categories: FC<CategoriesProps> = ({ className }) => {
           </li>
           <li className="categories__menu-item">
             <Button
-              className={`categories__menu-button ${selectedCategory === categoryNames.SetMenu ? 'is-selected' : ''}`}
-              onClick={() => setSelectedCategory(categoryNames.SetMenu)}
+              className={`categories__menu-button ${selectedCategory === ProductCategories.SetMenu ? 'is-selected' : ''}`}
+              onClick={() => setSelectedCategory(ProductCategories.SetMenu)}
             >
               <SetMenuIcon />
               Set Menu
@@ -151,7 +88,11 @@ export const Categories: FC<CategoriesProps> = ({ className }) => {
         </ul>
       </div>
       <div className="categories__products">
-        <Slider slides={slidesElements} />
+        {slidesElements.length ? (
+          <Slider slides={slidesElements} />
+        ) : (
+          'There is no one ' + selectedCategory
+        )}
       </div>
     </div>
   );
