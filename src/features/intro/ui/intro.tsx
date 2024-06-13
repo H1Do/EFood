@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import introBg from 'shared/assets/images/intro-bg.png';
 import './intro.scss';
 

@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import mobileAppImg1 from 'shared/assets/images/mobile-app/1.png';
 import mobileAppImg2 from 'shared/assets/images/mobile-app/2.png';
 import mobileAppImg3 from 'shared/assets/images/mobile-app/3.png';

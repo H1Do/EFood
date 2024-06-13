@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import clockIconSvg from 'shared/assets/images/icons/clock-icon.svg';
 import rightArrowSvg from 'shared/assets/images/icons/right-arrow-icon.svg';
 import { Button } from 'shared/ui/button';

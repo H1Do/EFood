@@ -1,9 +1,10 @@
+import { FC } from 'react';
+
 import deliveryBg from 'shared/assets/images/delivery-bg.png';
 import advantageImg1 from 'shared/assets/images/advantages/1.svg';
 import advantageImg2 from 'shared/assets/images/advantages/2.svg';
 import advantageImg3 from 'shared/assets/images/advantages/3.svg';
 
-import { FC } from 'react';
 
 interface DeliveryProps {
   className?: string;

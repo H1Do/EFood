@@ -1,13 +1,15 @@
 import { SearchAction, SearchActionTypes, SearchState } from './types';
 
 const initialState: SearchState = {
+  isOpened: false,
   products: [],
   loading: false,
   error: null,
   query: '',
   category: null,
   page: 1,
-  limit: 8,
+  limit: 6,
+  count: 0,
 };
 
 export const searchReducer = (
@@ -27,7 +29,8 @@ export const searchReducer = (
     case SearchActionTypes.FETCH_PRODUCTS_SUCCESS:
       return {
         ...state,
-        products: action.payload,
+        products: action.payload[1],
+        count: action.payload[0],
         loading: false,
         error: null,
       };
@@ -35,6 +38,8 @@ export const searchReducer = (
       return { ...state, products: [], loading: false, error: null };
     case SearchActionTypes.SET_PRODUCTS_PAGE:
       return { ...state, page: action.payload };
+    case SearchActionTypes.SET_IS_OPENED:
+      return { ...state, isOpened: action.payload };
     default:
       return state;
   }

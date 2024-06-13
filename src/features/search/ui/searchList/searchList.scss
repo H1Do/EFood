@@ -1,0 +1,36 @@
+.search-list {
+  --column-count: 3;
+  --gap: 26px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+
+  &--mobile {
+    --column-count: 2;
+    --gap: 13px;
+  }
+
+  &__title {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(var(--column-count), 1fr);
+    gap: var(--gap);
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__loader {
+    grid-column: span 3;
+  }
+}

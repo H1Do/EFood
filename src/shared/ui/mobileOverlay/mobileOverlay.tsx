@@ -1,14 +1,17 @@
 import { FC, useEffect, useRef } from 'react';
+
 import { CrossButton } from './../crossButton';
 import './mobile-overlay.scss';
 
 interface MobileOverlayProps {
   setDialog: (dialog: HTMLDialogElement) => void;
+  className: string;
   children: React.ReactNode;
 }
 
 export const MobileOverlay: FC<MobileOverlayProps> = ({
   setDialog,
+  className,
   children,
 }) => {
   const dialogRef = useRef<HTMLDialogElement>(null);
@@ -20,7 +23,10 @@ export const MobileOverlay: FC<MobileOverlayProps> = ({
   }, [dialogRef.current]);
 
   return (
-    <dialog className="mobile-overlay visible-mobile" ref={dialogRef}>
+    <dialog
+      className={`mobile-overlay visible-mobile ${className}`}
+      ref={dialogRef}
+    >
       <form method="dialog" className="mobile-overlay__close-button-wrapper">
         <CrossButton
           className="mobile-overlay__close-button"

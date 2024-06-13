@@ -1,7 +1,6 @@
-import { Product } from 'shared/types/product';
-import { CartActionTypes, CartAction } from './types';
+import { CartActionTypes, CartAction, CartState } from './types';
 
-const initialState: { cart: Product[] } = {
+const initialState: CartState = {
   cart: [],
 };
 

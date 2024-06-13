@@ -2,11 +2,13 @@ import { Product } from 'shared/types/product';
 import { ProductCategories } from 'shared/types/productCategories';
 
 export interface SearchState {
+  isOpened: boolean;
   products: Product[];
   loading: boolean;
   error: null | string;
   query: string;
   category: ProductCategories | null;
+  count: number;
   page: number;
   limit: number;
 }
@@ -16,6 +18,7 @@ export enum SearchActionTypes {
   FETCH_PRODUCTS_SUCCESS = 'FETCH_PRODUCTS_SUCCESS',
   FETCH_PRODUCTS_ERROR = 'FETCH_PRODUCTS_ERROR',
   SET_PRODUCTS_PAGE = 'SET_PRODUCTS_PAGE',
+  SET_IS_OPENED = 'SET_IS_OPENED',
 }
 
 interface FetchProductsAction {
@@ -25,7 +28,7 @@ interface FetchProductsAction {
 
 interface FetchProductsSuccessAction {
   type: SearchActionTypes.FETCH_PRODUCTS_SUCCESS;
-  payload: Product[];
+  payload: [number, Product[]];
 }
 
 interface FetchProductsErrorAction {
@@ -38,8 +41,14 @@ interface SetProductsPageAction {
   payload: number;
 }
 
+interface SetIsOpenedAction {
+  type: SearchActionTypes.SET_IS_OPENED;
+  payload: boolean;
+}
+
 export type SearchAction =
   | FetchProductsAction
   | FetchProductsSuccessAction
   | FetchProductsErrorAction
-  | SetProductsPageAction;
+  | SetProductsPageAction
+  | SetIsOpenedAction;

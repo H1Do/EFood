@@ -1,6 +1,7 @@
-import { apiInstance } from '../base';
 import { ProductCategories } from 'shared/types/productCategories';
 import { Product } from 'shared/types/product';
+
+import { apiInstance } from '../base';
 
 const BASE_URL = 'products';
 
@@ -26,6 +27,6 @@ export const getProducts = (
   return apiInstance.get<Product[]>(`${BASE_URL}?${params}`);
 };
 
-export const getProductById = (id: number): Promise<Product> => {
-  return apiInstance.get(`${BASE_URL}/${id}`);
+export const getProductById = async (id: number): Promise<Product> => {
+  return (await apiInstance.get<Product>(`${BASE_URL}/${id}`))[1];
 };

@@ -1,0 +1,29 @@
+@import 'shared/styles/media';
+
+.search-box {
+  max-height: 38px;
+  width: 100%;
+  border-width: 2px;
+  transition-duration: var(--transition-duration);
+
+  @include hover {
+    border-color: var(--secondary-color);
+  }
+
+  &__wrapper {
+    display: contents;
+  }
+
+  &[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  &[type="search"]::-ms-clear {
+    display: none;
+  }
+
+  &[type="search"]::-moz-clear {
+    display: none;
+  }
+}

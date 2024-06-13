@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import { RestaurantCard } from 'entities/restaurantCard';
 import restaurantImg1 from 'shared/assets/images/restaurants/1.png';
 import restaurantImg2 from 'shared/assets/images/restaurants/2.png';

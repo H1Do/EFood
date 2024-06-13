@@ -1,0 +1,19 @@
+.pagination {
+  &__list {
+    display: flex;
+    column-gap: 5px;
+  }
+
+  &__button {
+    padding: 0;
+    width: 35px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: none;
+
+    &--selected {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+    }
+  }
+}

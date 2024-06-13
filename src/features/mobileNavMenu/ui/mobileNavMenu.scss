@@ -1,0 +1,68 @@
+@import 'shared/styles/mixins';
+@import 'shared/styles/media';
+
+.mobile-nav-menu {
+  &__list {
+    @include flex-center;
+
+    flex-direction: column;
+    row-gap: 30px;
+
+    min-height: 80vh;
+  }
+
+  &__item {
+    &--top {
+      margin-bottom: auto;
+    }
+
+    &--thick {
+      width: 80%;
+    }
+  }
+
+  &__link {
+    @include reset-link;
+
+    transition-duration: var(--transition-duration);
+
+    @include hover {
+      color: var(--secondary-color);
+    }
+  }
+
+  &__button {
+    display: block;
+  }
+
+  &__cart {
+    display: flex;
+    flex-direction: column;
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 15px;
+      border-bottom: 2px solid var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    &-title {
+      color: var(--secondary-color);
+    }
+
+    &-close-button {
+      width: 48px;
+    }
+  }
+
+  &__search-box {
+    &-wrapper {
+      display: flex;
+    }
+
+    &-close-button {
+      width: 48px;
+    }
+  }
+}

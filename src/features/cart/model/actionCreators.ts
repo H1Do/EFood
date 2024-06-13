@@ -1,4 +1,5 @@
 import { Product } from 'shared/types/product';
+
 import { CartActionTypes } from './types';
 
 export const addProductAction = (payload: Product) => ({

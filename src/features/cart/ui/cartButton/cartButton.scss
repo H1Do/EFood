@@ -1,0 +1,24 @@
+@import 'shared/styles/mixins';
+
+.cart-button {
+
+  &--counter {
+    position: relative;
+
+    &::after {
+      @include flex-center;
+      @include square(14px);
+
+      content: attr(data-count);
+      position: absolute;
+      right: -4px;
+      top: 16px;
+      background-color: var(--secondary-color);
+      border-radius: 50%;
+
+      font-size: 10px;
+      line-height: 1;
+      color: var(--white-color);
+    }
+  }
+}

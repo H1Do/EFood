@@ -1,0 +1,22 @@
+@import 'shared/styles/mixins';
+
+.input {
+  @include fluid-text(18, 16);
+
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+  padding: 5px 15px;
+  border-radius: 70px;
+  caret-color: var(--secondary-color);
+  color: var(--primary-color);
+
+  &::placeholder {
+    color: var(--primary-color);
+    opacity: 0.9;
+  }
+
+  &:focus {
+    outline: none;
+    color: var(--secondary-color);
+  }
+}

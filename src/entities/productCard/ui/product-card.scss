@@ -45,5 +45,10 @@
     line-height: 18px;
     padding: 7px 13px;
     box-shadow: none;
+
+    &--selected {
+      color: var(--white-color);
+      background-color: var(--primary-color);
+    }
   }
 }

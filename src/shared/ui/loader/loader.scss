@@ -1,0 +1,31 @@
+@import 'shared/styles/mixins';
+
+.loader {
+  @include square(70px);
+
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(0deg, rgba(255, 61, 0, 0.2) 33%, var(--secondary-color) 100%);
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+
+  &::after {
+    @include abs-center;
+    @include square(92%);
+
+    content: '';
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: var(--global-bg-color);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg)
+  }
+  100% {
+    transform: rotate(360deg)
+  }
+}

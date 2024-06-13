@@ -1,0 +1,28 @@
+.cart-item {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  border-bottom: 1px solid var(--primary-color);
+  padding-bottom: 15px;
+  padding-inline: 7px;
+
+  &__rating {
+    font-size: 0.8em;
+    color: var(--secondary-color);
+  }
+
+  &__title {
+    font-size: 1em;
+  }
+
+  &__price {
+    font-size: 1.2em;
+    margin-left: auto;
+  }
+
+  &__button {
+    font-size: 1em;
+    padding: 7px 15px;
+    box-shadow: none;
+  }
+}

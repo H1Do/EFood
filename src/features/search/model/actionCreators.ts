@@ -1,7 +1,9 @@
-import { getProducts } from 'shared/api/product/product';
-import { SearchAction, SearchActionTypes } from './types';
 import { Dispatch } from 'redux';
+
+import { getProducts } from 'shared/api/product/product';
 import { ProductCategories } from 'shared/types/productCategories';
+
+import { SearchAction, SearchActionTypes } from './types';
 
 export const fetchProducts = (
   query: string,
@@ -12,16 +14,20 @@ export const fetchProducts = (
   return async (dispatch: Dispatch<SearchAction>) => {
     try {
       dispatch({
+        type: SearchActionTypes.SET_IS_OPENED,
+        payload: true,
+      });
+      dispatch({
         type: SearchActionTypes.FETCH_PRODUCTS,
         payload: {
           query,
           category,
         },
       });
-      const data = await getProducts(category, query, page, limit);
+      const [count, data] = await getProducts(category, query, page, limit);
       dispatch({
         type: SearchActionTypes.FETCH_PRODUCTS_SUCCESS,
-        payload: data,
+        payload: [count ? +count : 0, data],
       });
     } catch (error) {
       dispatch({
@@ -35,4 +41,9 @@ export const fetchProducts = (
 export const setProductsPage = (page: number): SearchAction => ({
   type: SearchActionTypes.SET_PRODUCTS_PAGE,
   payload: page,
+});
+
+export const setIsOpened = (isOpened: boolean): SearchAction => ({
+  type: SearchActionTypes.SET_IS_OPENED,
+  payload: isOpened,
 });

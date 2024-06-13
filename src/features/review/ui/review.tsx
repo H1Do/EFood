@@ -1,6 +1,7 @@
 import { FC } from 'react';
-import { Button } from 'shared/ui/button';
 import ReviewArrowIcon from 'shared/assets/images/icons/review-arrow.svg?react';
+
+import { Button } from 'shared/ui/button';
 import reviewBg from 'shared/assets/images/review-bg.png';
 import './review.scss';
 

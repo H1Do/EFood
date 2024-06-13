@@ -35,7 +35,10 @@ class ApiInstance {
     });
   }
 
-  async get<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
+  async get<T>(
+    endpoint: string,
+    options: RequestInit = {},
+  ): Promise<[string | null, T]> {
     const url = `${this.baseUrl}${endpoint}`;
     const mergedOptions: RequestInit = {
       ...options,
@@ -57,7 +60,7 @@ class ApiInstance {
     }
 
     const data: T = await response.json();
-    return data;
+    return [response.headers.get('x-total-count'), data];
   }
 }
 

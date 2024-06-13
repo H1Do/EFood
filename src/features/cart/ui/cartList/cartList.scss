@@ -1,0 +1,25 @@
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  height: 100%;
+
+  &__list {
+    max-height: 50svh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    gap: 26px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    column-gap: 30px;
+  }
+
+  &__total {
+    font-size: 1.75em;
+  }
+}

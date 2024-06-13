@@ -1,4 +1,3 @@
-import logoSvg from 'shared/assets/images/logo.svg';
 import LocationIcon from 'shared/assets/images/icons/location-icon.svg?react';
 import PhoneIcon from 'shared/assets/images/icons/phone-icon.svg?react';
 import MailIcon from 'shared/assets/images/icons/mail-icon.svg?react';
@@ -6,6 +5,8 @@ import FacebookIcon from 'shared/assets/images/icons/facebook-icon.svg?react';
 import TwitterIcon from 'shared/assets/images/icons/twitter-icon.svg?react';
 import InstagramIcon from 'shared/assets/images/icons/instagram-icon.svg?react';
 import PintersetIcon from 'shared/assets/images/icons/pinterset-icon.svg?react';
+
+import logoSvg from 'shared/assets/images/logo.svg';
 import './footer.scss';
 
 export const Footer = () => {
