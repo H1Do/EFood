@@ -12,10 +12,9 @@ import { ProductCard } from 'entities/productCard';
 import { ProductCategories } from 'shared/types/productCategories';
 import { getProducts } from 'shared/api/product/product';
 import { useFetching } from 'shared/hooks/useFetching';
-
+import { Loader } from 'shared/ui/loader';
 
 import './categories.scss';
-import { Loader } from 'shared/ui/loader';
 
 interface CategoriesProps {
   className?: string;
@@ -25,7 +24,7 @@ interface CategoriesProps {
 }
 
 export const Categories: FC<CategoriesProps> = ({
-  className,
+  className = '',
   addToCart,
   removeFromCart,
   cart,
@@ -34,12 +33,12 @@ export const Categories: FC<CategoriesProps> = ({
     ProductCategories.Burger,
   );
 
-  const [data, isLoading, error] = useFetching<[string | null, Product[]]>(
-    getProducts,
-    selectedCategory,
-  );
+  const [data, isLoading, error] = useFetching<
+    [string | null, Product[]],
+    [ProductCategories]
+  >(getProducts, selectedCategory);
 
-  const products = data ? (data as [string | null, Product[]])[1] : [];
+  const products = data ? data[1] : [];
 
   const slidesElements = useMemo<JSX.Element[]>(() => {
     if (!Array.isArray(products)) {
@@ -47,6 +46,7 @@ export const Categories: FC<CategoriesProps> = ({
     }
     return products.map((product) => (
       <ProductCard
+        key={product.id}
         item={product}
         addToCart={addToCart}
         removeFromCart={removeFromCart}
@@ -62,7 +62,9 @@ export const Categories: FC<CategoriesProps> = ({
           <li className="categories__menu-item">
             <Button
               className={`categories__menu-button ${selectedCategory === ProductCategories.Burger ? 'is-selected' : ''}`}
-              onClick={() => { setSelectedCategory(ProductCategories.Burger); }}
+              onClick={() => {
+                setSelectedCategory(ProductCategories.Burger);
+              }}
             >
               <BurgerIcon />
               Burger
@@ -71,7 +73,9 @@ export const Categories: FC<CategoriesProps> = ({
           <li className="categories__menu-item">
             <Button
               className={`categories__menu-button ${selectedCategory === ProductCategories.Pizza ? 'is-selected' : ''}`}
-              onClick={() => { setSelectedCategory(ProductCategories.Pizza); }}
+              onClick={() => {
+                setSelectedCategory(ProductCategories.Pizza);
+              }}
             >
               <PizzaIcon />
               tPizza
@@ -80,7 +84,9 @@ export const Categories: FC<CategoriesProps> = ({
           <li className="categories__menu-item">
             <Button
               className={`categories__menu-button ${selectedCategory === ProductCategories.Sandwich ? 'is-selected' : ''}`}
-              onClick={() => { setSelectedCategory(ProductCategories.Sandwich); }}
+              onClick={() => {
+                setSelectedCategory(ProductCategories.Sandwich);
+              }}
             >
               <SandwichIcon />
               sandwich
@@ -89,7 +95,9 @@ export const Categories: FC<CategoriesProps> = ({
           <li className="categories__menu-item">
             <Button
               className={`categories__menu-button ${selectedCategory === ProductCategories.AsianFood ? 'is-selected' : ''}`}
-              onClick={() => { setSelectedCategory(ProductCategories.AsianFood); }}
+              onClick={() => {
+                setSelectedCategory(ProductCategories.AsianFood);
+              }}
             >
               <AsianFoodIcon />
               Asian Food
@@ -98,7 +106,9 @@ export const Categories: FC<CategoriesProps> = ({
           <li className="categories__menu-item">
             <Button
               className={`categories__menu-button ${selectedCategory === ProductCategories.SetMenu ? 'is-selected' : ''}`}
-              onClick={() => { setSelectedCategory(ProductCategories.SetMenu); }}
+              onClick={() => {
+                setSelectedCategory(ProductCategories.SetMenu);
+              }}
             >
               <SetMenuIcon />
               Set Menu
@@ -110,7 +120,7 @@ export const Categories: FC<CategoriesProps> = ({
         {isLoading ? (
           <Loader size={200} />
         ) : error ? (
-          (error as string)
+          error
         ) : slidesElements.length ? (
           <Slider slides={slidesElements} />
         ) : (

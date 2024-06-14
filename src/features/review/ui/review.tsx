@@ -9,7 +9,7 @@ interface ReviewProps {
   className?: string;
 }
 
-export const Review: FC<ReviewProps> = ({ className }) => {
+export const Review: FC<ReviewProps> = ({ className = '' }) => {
   return (
     <div className={`review ${className}`}>
       <img

@@ -22,7 +22,7 @@ export const SearchList: FC<SearchListProps> = ({
   addToCart,
   removeFromCart,
 }) => {
-  const { products, page, query, loading, isOpened, count, limit } =
+  const { products, page, query, loading, isOpened, count, limit, error } =
     useTypedSelector((state) => state.search);
 
   const { setProductsPage, fetchProducts } = useAction();
@@ -38,11 +38,23 @@ export const SearchList: FC<SearchListProps> = ({
         <div
           className={`search-list ${mobileColumns ? 'search-list--mobile' : ''}`}
         >
-          <h2 className="search-list__title">
-            Search: <span className="marked">{query}</span>
-          </h2>
+          {query && (
+            <h2 className="search-list__title">
+              Search: <span className="marked">{query}</span>
+            </h2>
+          )}
           <ul className="search-list__list">
             {loading && <Loader size={200} className="search-list__loader" />}
+            {!loading && !products.length && !error && (
+              <div className="search-list__empty">
+                No products were found on request
+              </div>
+            )}
+            {error && (
+              <div className="search-list__error">
+                {`An error occurred: ${error}`}
+              </div>
+            )}
             {products.map((product) => (
               <li className="search-list__item" key={product.id}>
                 <ProductCard

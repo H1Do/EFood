@@ -6,6 +6,6 @@ interface LoaderProps {
   className?: string;
 }
 
-export const Loader: FC<LoaderProps> = ({ size = 48, className }) => {
+export const Loader: FC<LoaderProps> = ({ size = 48, className = '' }) => {
   return <div className={`loader ${className}`} style={{ width: size }}></div>;
 };

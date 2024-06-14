@@ -11,7 +11,7 @@ interface InputProps {
 }
 
 export const Input: FC<InputProps> = ({
-  className,
+  className = '',
   type = 'text',
   name,
   value,

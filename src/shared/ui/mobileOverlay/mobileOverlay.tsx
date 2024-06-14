@@ -20,7 +20,7 @@ export const MobileOverlay: FC<MobileOverlayProps> = ({
     if (dialogRef.current) {
       setDialog(dialogRef.current);
     }
-  }, [dialogRef.current]);
+  }, [setDialog]);
 
   return (
     <dialog

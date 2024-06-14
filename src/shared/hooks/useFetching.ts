@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
-export const useFetching = <T>(
-  request: (...args: any[]) => Promise<T>,
-  ...args: any[]
-) => {
+export const useFetching = <T, A extends unknown[]>(
+  request: (...args: A) => Promise<T>,
+  ...args: A
+): [T | null, boolean, string | null] => {
   const [data, setData] = useState<T | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -15,8 +15,12 @@ export const useFetching = <T>(
       .then((data) => {
         setData(data);
       })
-      .catch((error) => {
-        setError(error.toString());
+      .catch((error: unknown) => {
+        if (error instanceof Error) {
+          setError(error.message);
+        } else {
+          setError(String(error));
+        }
       })
       .finally(() => {
         setIsLoading(false);

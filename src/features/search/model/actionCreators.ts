@@ -32,7 +32,7 @@ export const fetchProducts = (
     } catch (error) {
       dispatch({
         type: SearchActionTypes.FETCH_PRODUCTS_ERROR,
-        payload: 'An error has occurred',
+        payload: String(error),
       });
     }
   };

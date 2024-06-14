@@ -30,6 +30,20 @@
     }
   }
 
+  &__empty,
+  &__error {
+    font-size: 1.1em;
+    grid-column: span 3;
+  }
+
+  &__empty {
+    color: var(--secondary-color);
+  }
+
+  &__error {
+    color: red;
+  }
+
   &__loader {
     grid-column: span 3;
   }

@@ -7,7 +7,7 @@ interface IntroProps {
   className?: string;
 }
 
-export const Intro: FC<IntroProps> = ({ className }) => {
+export const Intro: FC<IntroProps> = ({ className = '' }) => {
   return (
     <div className={`intro ${className}`}>
       <div className="intro__body">

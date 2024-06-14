@@ -13,6 +13,11 @@ export const cartReducer = (state = initialState, action: CartAction) => {
         ...state,
         cart: state.cart.filter((item) => item.id !== action.payload),
       };
+    case CartActionTypes.SET_PRODUCTS:
+      return {
+        ...state,
+        cart: action.payload,
+      };
     default:
       return state;
   }

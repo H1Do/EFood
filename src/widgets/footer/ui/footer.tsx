@@ -167,7 +167,7 @@ export const Footer = () => {
               </li>
               <li className="footer__links-item">
                 <a href="./" className="footer__links-link">
-                  What's new
+                  What&apos;s new
                 </a>
               </li>
               <li className="footer__links-item">

@@ -14,7 +14,7 @@ export const Pagination: FC<PaginationProps> = ({
   pageCount,
   currentPage,
   setPage,
-  className,
+  className = '',
 }) => {
   if (pageCount < 2) {
     return '';
@@ -29,7 +29,9 @@ export const Pagination: FC<PaginationProps> = ({
           <li className={`pagination__item`} key={number}>
             <Button
               className={`pagination__button  ${number === currentPage ? 'pagination__button--selected' : ''}`}
-              onClick={() => { setPage(number); }}
+              onClick={() => {
+                setPage(number);
+              }}
             >
               {number}
             </Button>

@@ -35,7 +35,7 @@ export const searchReducer = (
         error: null,
       };
     case SearchActionTypes.FETCH_PRODUCTS_ERROR:
-      return { ...state, products: [], loading: false, error: null };
+      return { ...state, products: [], loading: false, error: action.payload };
     case SearchActionTypes.SET_PRODUCTS_PAGE:
       return { ...state, page: action.payload };
     case SearchActionTypes.SET_IS_OPENED:

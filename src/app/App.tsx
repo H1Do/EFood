@@ -1,7 +1,7 @@
 import { Home } from 'pages/home';
 
-import './styles/styles.scss';
 import { Providers } from './providers';
+import './styles/styles.scss';
 
 function App() {
   return (

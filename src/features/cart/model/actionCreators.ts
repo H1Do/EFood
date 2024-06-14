@@ -11,3 +11,8 @@ export const removeProductAction = (payload: number) => ({
   type: CartActionTypes.REMOVE_PRODUCT,
   payload,
 });
+
+export const setProductsAction = (payload: Product[]) => ({
+  type: CartActionTypes.SET_PRODUCTS,
+  payload,
+});

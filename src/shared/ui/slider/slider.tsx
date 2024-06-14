@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, A11y } from 'swiper/modules';
 import LeftArrowIcon from 'shared/assets/images/icons/left-arrow-icon.svg?react';
@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 import './slider.scss';
 
 interface SliderProps {
-  slides: any[];
+  slides: ReactNode[];
   className?: string;
 }
 
@@ -52,7 +52,7 @@ export const Slider: React.FC<SliderProps> = ({
           }}
           scrollbar={{ draggable: true }}
         >
-          {slides.map((slide: any, index) => (
+          {slides.map((slide: ReactNode, index) => (
             <SwiperSlide key={index}>{slide}</SwiperSlide>
           ))}
         </Swiper>

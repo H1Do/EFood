@@ -11,7 +11,7 @@ interface MobileAppProps {
   className?: string;
 }
 
-export const MobileApp: FC<MobileAppProps> = ({ className }) => {
+export const MobileApp: FC<MobileAppProps> = ({ className = '' }) => {
   return (
     <div className={`mobile-app ${className}`}>
       <div className="mobile-app__inner">
@@ -21,8 +21,8 @@ export const MobileApp: FC<MobileAppProps> = ({ className }) => {
           </h2>
           <div className="mobile-app__description">
             <p>
-              It's all at your fingertips -- the restaurants you love. Find the
-              right food to suit your mood, and make the first bite last. Go
+              It&apos;s all at your fingertips -- the restaurants you love. Find
+              the right food to suit your mood, and make the first bite last. Go
               ahead, download app and get 50% discount
             </p>
           </div>

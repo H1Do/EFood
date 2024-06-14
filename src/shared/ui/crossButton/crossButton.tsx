@@ -5,7 +5,7 @@ interface CrossButtonProps {
   className?: string;
   buttonType?: 'submit' | 'reset' | 'button';
   children?: React.ReactNode;
-  onClick?: any;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const CrossButton: FC<CrossButtonProps> = ({

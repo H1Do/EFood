@@ -7,7 +7,7 @@ export interface CartState {
 export enum CartActionTypes {
   ADD_PRODUCT = 'ADD_PRODUCT',
   REMOVE_PRODUCT = 'REMOVE_PRODUCT',
-  GET_PRODUCTS = 'GET_PRODUCTS',
+  SET_PRODUCTS = 'SET_PRODUCTS',
 }
 
 interface AddProductAction {
@@ -20,4 +20,12 @@ interface RemoveProductAction {
   payload: number;
 }
 
-export type CartAction = AddProductAction | RemoveProductAction;
+interface SetProductsAction {
+  type: CartActionTypes.SET_PRODUCTS;
+  payload: Product[];
+}
+
+export type CartAction =
+  | AddProductAction
+  | RemoveProductAction
+  | SetProductsAction;

@@ -1,16 +1,16 @@
 import { FC } from 'react';
+import TelegramIcon from 'shared/assets/images/icons/telegram-icon.svg?react';
 
 import { Button } from 'shared/ui/button';
 import { Input } from 'shared/ui/input';
 
 import './subscribe.scss';
-import TelegramIcon from 'shared/assets/images/icons/telegram-icon.svg?react';
 
 interface SubscribeProps {
   className?: string;
 }
 
-export const Subscribe: FC<SubscribeProps> = ({ className }) => {
+export const Subscribe: FC<SubscribeProps> = ({ className = '' }) => {
   return (
     <div className={`subscribe ${className}`}>
       <div className="subscribe__inner">

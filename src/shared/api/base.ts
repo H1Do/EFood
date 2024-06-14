@@ -1,4 +1,4 @@
-const API_URL = 'https://my-json-server.typicode.com/H1Do/MockData/';
+const API_URL = process.env.VITE_API_URL || '';
 
 class ApiInstance {
   private baseUrl: string;
@@ -28,9 +28,13 @@ class ApiInstance {
           clearTimeout(timer);
           resolve(response);
         })
-        .catch((err) => {
+        .catch((err: unknown) => {
           clearTimeout(timer);
-          reject(err);
+          if (err instanceof Error) {
+            reject(err);
+          } else {
+            reject(new Error(String(err)));
+          }
         });
     });
   }
@@ -56,10 +60,12 @@ class ApiInstance {
     );
 
     if (!response.ok) {
-      throw new Error(`Error: ${response.status} ${response.statusText}`);
+      throw new Error(
+        `Error: ${response.status.toString()} ${response.statusText}`,
+      );
     }
 
-    const data: T = await response.json();
+    const data: T = (await response.json()) as T;
     return [response.headers.get('x-total-count'), data];
   }
 }

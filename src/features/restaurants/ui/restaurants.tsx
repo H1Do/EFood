@@ -13,7 +13,7 @@ interface RestaurantsProps {
   className?: string;
 }
 
-export const Restaurants: FC<RestaurantsProps> = ({ className }) => {
+export const Restaurants: FC<RestaurantsProps> = ({ className = '' }) => {
   return (
     <div className={`restaurants ${className}`}>
       <ul className="restaurants__list">

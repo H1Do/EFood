@@ -24,9 +24,9 @@ export const getProducts = (
         _limit: limit.toString(),
       });
 
-  return apiInstance.get<Product[]>(`${BASE_URL}?${params}`);
+  return apiInstance.get<Product[]>(`${BASE_URL}?${params.toString()}`);
 };
 
 export const getProductById = async (id: number): Promise<Product> => {
-  return (await apiInstance.get<Product>(`${BASE_URL}/${id}`))[1];
+  return (await apiInstance.get<Product>(`${BASE_URL}/${id.toString()}`))[1];
 };

@@ -5,12 +5,11 @@ import advantageImg1 from 'shared/assets/images/advantages/1.svg';
 import advantageImg2 from 'shared/assets/images/advantages/2.svg';
 import advantageImg3 from 'shared/assets/images/advantages/3.svg';
 
-
 interface DeliveryProps {
   className?: string;
 }
 
-export const Delivery: FC<DeliveryProps> = ({ className }) => {
+export const Delivery: FC<DeliveryProps> = ({ className = '' }) => {
   return (
     <div className={`delivery ${className}`}>
       <div className="delivery__inner">
