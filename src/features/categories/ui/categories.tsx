@@ -48,6 +48,7 @@ export const Categories: FC<CategoriesProps> = ({
       <ProductCard
         key={product.id}
         item={product}
+        className="slider__item"
         addToCart={addToCart}
         removeFromCart={removeFromCart}
         isInCart={!!cart.find((item) => item.id === product.id)}

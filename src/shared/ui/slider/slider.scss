@@ -4,10 +4,15 @@
   swiper-slide {
     flex-shrink: 100 !important;
     width: 208px;
+    margin-inline: auto;
   }
 
   &__products {
     margin-bottom: 40px;
+  }
+
+  &__item {
+    margin-inline: auto;
   }
 
   &__actions {

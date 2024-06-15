@@ -43,7 +43,14 @@ export const MobileNavMenu: FC<MobileNavMenuProps> = ({
       >
         <span className="visually-hidden">Open navigation menu</span>
       </BurgerButton>
-      <MobileOverlay setDialog={setMobileOverlay} className="mobile-nav-menu">
+      <MobileOverlay
+        setDialog={setMobileOverlay}
+        onClose={() => {
+          setIsSearchBoxOpened(false);
+          setIsCartOpened(false);
+        }}
+        className="mobile-nav-menu"
+      >
         <div className="mobile-nav-menu__body">
           <ul className="mobile-nav-menu__list">
             {isCartOpened ? (

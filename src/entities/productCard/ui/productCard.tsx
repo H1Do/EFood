@@ -49,6 +49,7 @@ const Stars: React.FC<StarsProps> = ({ rating }) => {
 };
 
 interface ProductCardProps {
+  className?: string;
   item: Product;
   addToCart: (self: Product) => void;
   removeFromCart: (selfId: number) => void;
@@ -58,11 +59,12 @@ interface ProductCardProps {
 export const ProductCard: React.FC<ProductCardProps> = ({
   item,
   addToCart,
+  className = '',
   removeFromCart,
   isInCart,
 }) => {
   return (
-    <div className="product-card">
+    <div className={`product-card ${className}`}>
       <img
         src={item.image}
         width={144}

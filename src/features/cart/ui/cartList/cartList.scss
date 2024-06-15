@@ -15,8 +15,10 @@
   &__footer {
     display: flex;
     justify-content: right;
+    flex-wrap: wrap;
     align-items: center;
     column-gap: 30px;
+    row-gap: 15px;
   }
 
   &__total {

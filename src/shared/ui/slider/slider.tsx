@@ -20,13 +20,13 @@ export const Slider: React.FC<SliderProps> = ({
     1200: {
       slidesPerView: 5,
     },
-    900: {
+    967: {
       slidesPerView: 4,
     },
-    700: {
+    660: {
       slidesPerView: 3,
     },
-    504: {
+    462: {
       slidesPerView: 2,
     },
     0: {
